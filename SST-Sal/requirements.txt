@@ -1,0 +1,9 @@
+numpy
+opencv-python
+tqdm
+torch
+onnx
+onnxruntime
+onnxruntime-gpu
+pillow
+scipy
