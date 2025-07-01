@@ -1,4 +1,4 @@
-# 360-SATC--Saliency-Aware-Tile-Compression-for-Real-Time-360--Video-Streaming-at-the-Edge
+# 360-SATC Saliency-Aware-Tile-Compression-for-Real-Time-360 Video-Streaming-at-the-Edge
 
 <img src="https://github.com/publioelon/360-SATC/blob/main/proposed_v3.svg">
 
