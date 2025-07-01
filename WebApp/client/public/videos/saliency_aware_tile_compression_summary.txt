@@ -1,0 +1,14 @@
+raft_ms_mean: 12.3477
+raft_ms_std: 1.6044
+sst_ms_mean: 32.1443
+sst_ms_std: 7.0805
+comp_ms_mean: 23.9345
+comp_ms_std: 3.3140
+size_mb_mean: 0.3623
+size_mb_std: 0.0073
+psnr_mean: 44.1039
+psnr_std: 1.0620
+ssim_mean: 0.9820
+ssim_std: 0.0035
+lpips_mean: 0.0054
+lpips_std: 0.0010

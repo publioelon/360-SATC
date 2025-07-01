@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Sender Sample</title>
+</head>
+<body>
+  <div id="container">
+    <h1>Sender Sample</h1>
+
+    <div id="warning" hidden=true></div>
+
+    <div id="buttons">
+      <button type="button" id="startVideoButton" autocomplete="off">Start Video</button>
+      <button type="button" id="setUpButton" autocomplete="off" disabled>Set Up</button>
+      <button type="button" id="hangUpButton" autocomplete="off" disabled>Hang Up</button>
+    </div>
+
+    <div id="preview">
+      <div id="local">
+        <h2>Local</h2>
+        <video id="localVideo" playsinline autoplay muted=true></video>
+        <div id="localVideoStats"></div>
+      </div>
+    </div>
+
+    <div class="box">
+      <span>Connection ID:</span>
+      <textarea id="textForConnectionId"></textarea>
+    </div>
+    <div class="box">
+      <span>Codec preferences:</span>
+      <select id="codecPreferences" autocomplete="off">
+        <option selected value="">Default</option>
+      </select>
+    </div>
+
+  </div>
+</body>
+
+<script type="text/javascript" src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+<script src="https://unpkg.com/event-target@latest/min.js"></script>
+<script src="https://unpkg.com/resize-observer-polyfill@1.5.0/dist/ResizeObserver.global.js"></script>
+<script type="module" src="js/main.js"></script>
+</html>
