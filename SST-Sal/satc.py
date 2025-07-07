@@ -9,6 +9,7 @@ from torch.amp import autocast
 import onnxruntime as ort
 from utils.flow_viz import flow_to_image
 from tqdm import tqdm
+
 os.environ["OMP_NUM_THREADS"] = "1"
 
 warnings.filterwarnings("ignore", category=FutureWarning)
@@ -27,10 +28,8 @@ HIGH_BANDWIDTH = (0.41e6, 0.70e6)
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-SAL_PATH = os.path.join(BASE_DIR, 'images', 'saliency')
-FRAMES_PATH = os.path.join(BASE_DIR, 'images', 'frames')
-OUTPUT_PATH = r'C:/Users/Publi/Downloads/outputs'
-OVERLAY_PATH = r'C:/Users/Publi/Downloads/overlay'
+OUTPUT_PATH = r'path/to/outputs'
+OVERLAY_PATH = r'path/to/overlay/frames
 SST_SAL_MODEL_PATH = os.path.join(BASE_DIR, 'models', 'SST-Sal', 'SST_Sal.pth')
 RAFT_MODEL_PATH   = os.path.join(BASE_DIR, 'models', 'SEA-RAFT', 'Tartan-C-T-TSKH-kitti432x960-S.onnx')
 
@@ -174,30 +173,40 @@ def str2bool_custom(v):
     else:
         raise argparse.ArgumentTypeError('Boolean value expected.')
 
+def read_video_frames(video_path):
+    cap = cv2.VideoCapture(video_path)
+    frames = []
+    while True:
+        ret, frame = cap.read()
+        if not ret:
+            break
+        frames.append(frame)
+    cap.release()
+    return frames
+
 def main():
-    parser = argparse.ArgumentParser("SEA-RAFT & SST-SAL JPEG pipeline")
-    parser.add_argument("--frames_dir",         default=FRAMES_PATH)
-    parser.add_argument("--saliency_dir",       default=SAL_PATH)
-    parser.add_argument("--sst_sal_model_path", default=SST_SAL_MODEL_PATH)
-    parser.add_argument("--raft_model_path",    default=RAFT_MODEL_PATH)
-    parser.add_argument("--bw",                 choices=["low","high"], required=True)
-    parser.add_argument("--mixed_precision",    type=str2bool_custom, default=True)
-    parser.add_argument("--overlay",            type=str2bool_custom, default=True)
+    parser = argparse.ArgumentParser("SATC Pipeline")
+    parser.add_argument("--video_path",           required=True, help="Path to input video (.mp4)")
+    parser.add_argument("--sst_sal_model_path",   default=SST_SAL_MODEL_PATH)
+    parser.add_argument("--raft_model_path",      default=RAFT_MODEL_PATH)
+    parser.add_argument("--bw",                   choices=["low","high"], required=True)
+    parser.add_argument("--mixed_precision",      type=str2bool_custom, default=True)
+    parser.add_argument("--overlay",              type=str2bool_custom, default=True)
     args = parser.parse_args()
 
-    frames = sorted(f for f in os.listdir(args.frames_dir) if f.lower().endswith((".png",".jpg")))
-    total_frames = len(frames) - 1
+    print(f"Reading frames from: {args.video_path}")
+    rgb_frames = read_video_frames(args.video_path)
+    total_frames = len(rgb_frames) - 1
     bw_qp = generate_bandwidth_values(total_frames, args.bw)
+    print(f"Total frames loaded: {len(rgb_frames)}")
 
-    # Preload all RGB frames into memory (as numpy arrays)
-    rgb_frames = [cv2.imread(os.path.join(args.frames_dir, f)) for f in frames]
-
-    sess      = ort.InferenceSession(args.raft_model_path,
+    sess = ort.InferenceSession(args.raft_model_path,
                 providers=["TensorrtExecutionProvider","CUDAExecutionProvider","CPUExecutionProvider"])
-    dummy     = np.zeros((1,3,RAFT_HEIGHT,RAFT_WIDTH), np.float32)
+    dummy = np.zeros((1,3,RAFT_HEIGHT,RAFT_WIDTH), np.float32)
     inp_names = [i.name for i in sess.get_inputs()]
     sess.run(None, {inp_names[0]: dummy, inp_names[1]: dummy})
 
+    # Setup SST-Sal
     sst = load_sst_sal_model(args.sst_sal_model_path)
     warm_up_sst_sal(sst, mixed_precision=args.mixed_precision)
 
