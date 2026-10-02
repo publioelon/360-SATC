@@ -1,6 +1,12 @@
+<div align="center">
+
 # 360-SATC
 
-**Saliency-Aware Tile Compression for Real-Time 360° Video Streaming at the Edge**
+### Saliency-Aware Tile Compression for Real-Time 360° Video Streaming at the Edge
+
+[Quick start](#quick-start) · [Streaming guide](docs/streaming.md) · [Reproduce experiments](docs/reproduction.md) · [Download GXRStream](https://drive.google.com/file/d/1Jy8PrMn2373mifEb80dezbvN0fJgldyk/view?usp=sharing) · [Citation](#citation)
+
+</div>
 
 360-SATC uses **MoST-Sal** to identify important regions of a panoramic video,
 **NVENC** to allocate spatial quality within one coded stream, and **GXRStream**
@@ -8,7 +14,27 @@ to deliver video to Unity and Meta Quest 3. **GCC + RT-MPC** controls the aggreg
 bitrate in the retained network experiments. Spatial decisions require no viewer
 head, gaze, or viewport feedback.
 
-## Start here
+## Framework
+
+[![Proposed 360-SATC streaming framework](docs/assets/360-satc-framework.png)](docs/assets/360-satc-framework.pdf)
+
+**Proposed streaming framework.** MoST-Sal guides spatial quality allocation at
+an edge GPU, network feedback drives aggregate bitrate adaptation, and GXRStream
+delivers the encoded panorama to a Unity receiver. Click the figure for the PDF.
+
+## GXRStream in action
+
+![GXRStream sender and Unity receiver displaying London Tower Bridge](docs/assets/gxrstream_4.png)
+
+**Ubuntu sender and Unity receiver.** The illustrated session streams H.265 at
+4096×2048 and 30 FPS on the RTX 4060 notebook. GXRStream's upstream release is
+named QGXS/QSXR, so those names also appear in the interface.
+
+Download the [GXRStream v0.1.0 bundle](https://drive.google.com/file/d/1Jy8PrMn2373mifEb80dezbvN0fJgldyk/view?usp=sharing)
+for the Ubuntu sender, complete Unity receiver project, Quest 3 APK, and checksums.
+Follow the [streaming guide](docs/streaming.md) to run it.
+
+## Quick start
 
 Ubuntu with an NVIDIA GPU is the primary encoding platform. The frozen MoST-Sal
 model is included; videos and NVIDIA's Video Codec SDK are supplied separately.
@@ -83,3 +109,23 @@ here; this update does not claim new experimental results.
 
 360-SATC uses the [MIT license](LICENSE). Imported GXRStream/QGXS code retains
 its [Apache 2.0 license](GXRStream/LICENSE). See [source provenance](docs/source_manifest.json).
+
+## Citation
+
+If you use 360-SATC in your research, please cite the accompanying manuscript:
+
+```bibtex
+@unpublished{silva2026satc,
+  title  = {{360-SATC}: Saliency-Aware Tile Compression for Real-Time
+            360 Degree Video Streaming at the Edge},
+  author = {da Silva, Públio Elon Correa and Almeida, Jurandy and
+            Verdi, Fábio Luciano and Caruso, Andrea and Grasso, Christian and
+            Schembra, Giovanni and Patra, Gyanesh},
+  year   = {2026},
+  note   = {Research manuscript; accompanying source code},
+  url    = {https://github.com/publioelon/360-SATC}
+}
+```
+
+This entry describes the manuscript. Add the final publication details and DOI
+when they become available.

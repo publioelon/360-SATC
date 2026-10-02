@@ -108,3 +108,33 @@ client for transport measurements, distinct from Unity display performance.
 The new `satc.py` and `stream_encoded.py` wrappers passed source checks here,
 but have not been rerun on the notebook or headset. This does not change the
 validation status of the existing GXRStream release.
+
+## Interface reference
+
+The screenshots below show setup states; a blank or checkerboard display before
+frames arrive is not a successful playback result. Match the sender and receiver
+codec and dimensions before starting the stream.
+
+### Ubuntu sender
+
+![Ubuntu sender controls before streaming](assets/gxrstream_1.png)
+
+Select the input video, receiver address, codec, dimensions, frame rate, and
+bitrate, then choose **Start sender**. The pictured values are UI examples.
+
+### Unity display mode
+
+![Unity receiver display-mode selection](assets/gxrstream_2.png)
+
+In the receiver's **Singleton → G Streamer Player** component, choose **Flat 2D**
+for a panorama preview or **Sphere 360** for spherical display.
+
+### Receiver configuration and HUD
+
+![Unity receiver Inspector and HUD while waiting for video](assets/gxrstream_3.png)
+
+Check the WebRTC URI, stream dimensions, and codec in the Inspector. This
+screenshot shows a waiting receiver; decoded frames and visible video confirm
+playback, as illustrated below.
+
+![Running sender and Unity receiver](assets/gxrstream_4.png)
