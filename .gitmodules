@@ -1,0 +1,3 @@
+[submodule "GXRStream/receiver-source"]
+	path = GXRStream/receiver-source
+	url = https://github.com/publioelon/QGXS---quest-gstreamer-xr-streaming-.git

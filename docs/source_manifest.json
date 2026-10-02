@@ -1,0 +1,274 @@
+[
+  {
+    "file": "saliency/models/most_sal_144x192.onnx.gz",
+    "source": "data/D-SAV360/flowsal/models/FlowSal_R192_T20_C8_v1_1_Robust1000_static_opset16.onnx",
+    "source_sha256": "51a49cf5cc9ead1bef4a60e9c454d164c1eca6733f0ea2039ab84bdc3bbbbafa",
+    "packaged_sha256": "495e5b29250f905de995fe3452b318d1175e8be0e690623b6a4eafe711fdc54b",
+    "note": "Packaged source includes documented portability changes, or lossless gzip compression for the ONNX artifact."
+  },
+  {
+    "file": "runtime/encoder.py",
+    "source": "data/home-mininet-ovs/Downloads/SATC_FINAL_QUALITY_EXP09/final_360satc_runner.py",
+    "source_sha256": "3d296f1442283f49f4f994796d2082667a79d117127b97200804b4c0b1ec3a7d",
+    "packaged_sha256": "b5c14bc056e14cb41d45e268d94da2eb777b846470c5c45c9f2a32fcd7719ffb",
+    "note": "Packaged source includes documented portability changes, or lossless gzip compression for the ONNX artifact."
+  },
+  {
+    "file": "experiments/research/all_experiments_v6.py",
+    "source": "data/home-mininet-ovs/Downloads/files_to_upload/RUN_360SATC_ALL_EXPERIMENTS_v6.py",
+    "source_sha256": "58b1d76a126ef3ea11fb7ee6e9b77225ae280c5d8bda63f673bc278c86199880",
+    "packaged_sha256": "d90cf3d3224eaf7ae78f32d76d82c772fa8090e68c7933b3b9e72c70510ec588",
+    "note": "Packaged source includes documented portability changes, or lossless gzip compression for the ONNX artifact."
+  },
+  {
+    "file": "experiments/research/allocation_candidates.py",
+    "source": "data/home-mininet-ovs/Downloads/files_to_upload/360SATC_Saliency_Solution.py",
+    "source_sha256": "c4bc1d9bf278212d54bb92d1fba052bc93bec48627abcb6b16901f90aecbb4e9",
+    "packaged_sha256": "c4bc1d9bf278212d54bb92d1fba052bc93bec48627abcb6b16901f90aecbb4e9"
+  },
+  {
+    "file": "experiments/research/final_quality_matrix.py",
+    "source": "data/home-mininet-ovs/Downloads/files_to_upload/RUN_360SATC_FINAL_QUALITY_MATRIX_v1.py",
+    "source_sha256": "abf41a8dc140e7ec272df928a1d1e637342ec3b6772bfce00509bc18955f5504",
+    "packaged_sha256": "aa2842258ef73a134a43744b88ee88881f9e8e3568919f59ddde59b4e295f43b",
+    "note": "Packaged source includes documented portability changes, or lossless gzip compression for the ONNX artifact."
+  },
+  {
+    "file": "experiments/research/viewport_batch.py",
+    "source": "home/mininet-ovs/snap/firefox/common/RUN_360SATC_VIEWPORT_BATCH_v2.py",
+    "source_sha256": "382d0701a3edf2db177f1291d60a8eb2c7fb7b38e1427f1da3bdc62ce6d788fa",
+    "packaged_sha256": "382d0701a3edf2db177f1291d60a8eb2c7fb7b38e1427f1da3bdc62ce6d788fa"
+  },
+  {
+    "file": "experiments/research/viewport_analysis.py",
+    "source": "home/mininet-ovs/snap/firefox/common/ANALYZE_360SATC_VIEWPORT_FINAL_20_v2.py",
+    "source_sha256": "cdd34c555df5910d217be953ea31b9a7a6454d5527228790b03a5544cce1a7e0",
+    "packaged_sha256": "cdd34c555df5910d217be953ea31b9a7a6454d5527228790b03a5544cce1a7e0"
+  },
+  {
+    "file": "saliency/research/Run_Sports360_FlowSal_Full104_OfficialProtocol_v1.sh",
+    "source": "data/home-mininet-ovs/Downloads/SATC_Pipeline_Setup_20260920_001613_kpz2lexj/UPLOAD_PIPELINE_SOURCE/sources/040_Run_Sports360_FlowSal_Full104_OfficialProtocol_v1.sh",
+    "source_sha256": "114674d78c096a21eca1aef453141ae7c604677102a9afa9d06e3ebbdad59e27",
+    "packaged_sha256": "114674d78c096a21eca1aef453141ae7c604677102a9afa9d06e3ebbdad59e27"
+  },
+  {
+    "file": "saliency/research/Run_FlowSal_VREyeTracking_AuthorProtocol_Lean_v1.sh",
+    "source": "data/home-mininet-ovs/Downloads/SATC_Pipeline_Setup_20260920_001613_kpz2lexj/UPLOAD_PIPELINE_SOURCE/sources/044_Run_FlowSal_VREyeTracking_AuthorProtocol_Lean_v1.sh",
+    "source_sha256": "75e5f862accb90125f5a9f6b88bc04eda6b2a0daad5a7e3196e5bccf62ed469e",
+    "packaged_sha256": "75e5f862accb90125f5a9f6b88bc04eda6b2a0daad5a7e3196e5bccf62ed469e"
+  },
+  {
+    "file": "saliency/research/Run_FlowSal_v1_1_Panonut360_ZeroShot_v1.sh",
+    "source": "data/home-mininet-ovs/Downloads/SATC_Pipeline_Setup_20260920_001613_kpz2lexj/UPLOAD_PIPELINE_SOURCE/sources/046_Run_FlowSal_v1_1_Panonut360_ZeroShot_v1.sh",
+    "source_sha256": "af346e413e5107e2d91686dcbba713cd6da60ad9446743effed0ecf848debbdb",
+    "packaged_sha256": "af346e413e5107e2d91686dcbba713cd6da60ad9446743effed0ecf848debbdb"
+  },
+  {
+    "file": "saliency/research/Run_FlowSal_v1_1_VREyeTracking_ZeroShot_v1.sh",
+    "source": "data/home-mininet-ovs/Downloads/SATC_Pipeline_Setup_20260920_001613_kpz2lexj/UPLOAD_PIPELINE_SOURCE/sources/047_Run_FlowSal_v1_1_VREyeTracking_ZeroShot_v1.sh",
+    "source_sha256": "855bfd9a319972d3cd80d4e5278e9678d4de7621178cb4603f54576a2fced462",
+    "packaged_sha256": "855bfd9a319972d3cd80d4e5278e9678d4de7621178cb4603f54576a2fced462"
+  },
+  {
+    "file": "saliency/research/Run_FlowSal_v1_1_BalancedAnchor_Study_v1.sh",
+    "source": "data/home-mininet-ovs/Downloads/SATC_Pipeline_Setup_20260920_001613_kpz2lexj/UPLOAD_PIPELINE_SOURCE/sources/049_Run_FlowSal_v1_1_BalancedAnchor_Study_v1.sh",
+    "source_sha256": "02eaef38d0cd5f7734d09a01bf6bb3a0812a8e3952a068b1036739bee3b47e94",
+    "packaged_sha256": "02eaef38d0cd5f7734d09a01bf6bb3a0812a8e3952a068b1036739bee3b47e94"
+  },
+  {
+    "file": "saliency/research/benchmark_sst_sal_v2.py",
+    "source": "data/home-mininet-ovs/Downloads/SATC_Pipeline_Setup_20260920_001613_kpz2lexj/UPLOAD_PIPELINE_SOURCE/sources/051_benchmark_sst_sal_v2.py",
+    "source_sha256": "7192bd5242c65a8ac06fe23e1f6fe6b28690b673593f6d95e6a934591c08c9f5",
+    "packaged_sha256": "7192bd5242c65a8ac06fe23e1f6fe6b28690b673593f6d95e6a934591c08c9f5"
+  },
+  {
+    "file": "GXRStream/ubuntu/launcher_gui_linux.py",
+    "source": "home/mininet-ovs/qgxs_linux_test/qgxs_linux_phase1/launcher_gui_linux.py",
+    "source_sha256": "84555b4fccddbc43eda44a9f003b495e8e0d754180a1981f3446677ffce03a53",
+    "packaged_sha256": "84555b4fccddbc43eda44a9f003b495e8e0d754180a1981f3446677ffce03a53"
+  },
+  {
+    "file": "GXRStream/ubuntu/receiver/linux/webrtc_receiver.py",
+    "source": "home/mininet-ovs/qgxs_linux_test/qgxs_linux_phase1/receiver/linux/webrtc_receiver.py",
+    "source_sha256": "8c0bd6cad148baba4ddc49c2273df99548a92d8274e7e56b5dc00447473ff686",
+    "packaged_sha256": "8c0bd6cad148baba4ddc49c2273df99548a92d8274e7e56b5dc00447473ff686"
+  },
+  {
+    "file": "GXRStream/ubuntu/scripts/linux/check_receiver_runtime.sh",
+    "source": "home/mininet-ovs/qgxs_linux_test/qgxs_linux_phase1/scripts/linux/check_receiver_runtime.sh",
+    "source_sha256": "9069d9f92adedc4cde4420015cba9581395672014f0bcc194092c44ec258dc09",
+    "packaged_sha256": "9069d9f92adedc4cde4420015cba9581395672014f0bcc194092c44ec258dc09"
+  },
+  {
+    "file": "GXRStream/ubuntu/scripts/linux/check_sender_runtime.sh",
+    "source": "home/mininet-ovs/qgxs_linux_test/qgxs_linux_phase1/scripts/linux/check_sender_runtime.sh",
+    "source_sha256": "68f4c3d73a6c8456b6735023c63adc7ff7d02945784172e25d1f1a91132b01bd",
+    "packaged_sha256": "68f4c3d73a6c8456b6735023c63adc7ff7d02945784172e25d1f1a91132b01bd"
+  },
+  {
+    "file": "GXRStream/ubuntu/scripts/linux/install_sender_deps_ubuntu.sh",
+    "source": "home/mininet-ovs/qgxs_linux_test/qgxs_linux_phase1/scripts/linux/install_sender_deps_ubuntu.sh",
+    "source_sha256": "476925d5b282e55980f51d6abb3afaf5695f0d1c69d18b7825206b07cd7a201c",
+    "packaged_sha256": "476925d5b282e55980f51d6abb3afaf5695f0d1c69d18b7825206b07cd7a201c"
+  },
+  {
+    "file": "GXRStream/ubuntu/scripts/linux/run_av1_4k120.sh",
+    "source": "home/mininet-ovs/qgxs_linux_test/qgxs_linux_phase1/scripts/linux/run_av1_4k120.sh",
+    "source_sha256": "170b3b8c598cdb1eba9c4564d33162be2690f1413592ca55b9b95d8391604ef0",
+    "packaged_sha256": "170b3b8c598cdb1eba9c4564d33162be2690f1413592ca55b9b95d8391604ef0"
+  },
+  {
+    "file": "GXRStream/ubuntu/scripts/linux/run_h264_4k120.sh",
+    "source": "home/mininet-ovs/qgxs_linux_test/qgxs_linux_phase1/scripts/linux/run_h264_4k120.sh",
+    "source_sha256": "6fca1176502c71800d20f466dc87eb586c17f0a9d87981c05b45160260ad8899",
+    "packaged_sha256": "6fca1176502c71800d20f466dc87eb586c17f0a9d87981c05b45160260ad8899"
+  },
+  {
+    "file": "GXRStream/ubuntu/scripts/linux/run_h265_1080p30.sh",
+    "source": "home/mininet-ovs/qgxs_linux_test/qgxs_linux_phase1/scripts/linux/run_h265_1080p30.sh",
+    "source_sha256": "879d23c54b47fd1c5480c747cfd7f0ec80bd2e90140da0721be5419d725128c6",
+    "packaged_sha256": "879d23c54b47fd1c5480c747cfd7f0ec80bd2e90140da0721be5419d725128c6"
+  },
+  {
+    "file": "GXRStream/ubuntu/scripts/linux/run_h265_4k120.sh",
+    "source": "home/mininet-ovs/qgxs_linux_test/qgxs_linux_phase1/scripts/linux/run_h265_4k120.sh",
+    "source_sha256": "3e9a232029a3473da919689c7b9a60dfbb4c3a10f09203909f3f6d341dfaa3ed",
+    "packaged_sha256": "3e9a232029a3473da919689c7b9a60dfbb4c3a10f09203909f3f6d341dfaa3ed"
+  },
+  {
+    "file": "GXRStream/ubuntu/scripts/linux/run_receiver.sh",
+    "source": "home/mininet-ovs/qgxs_linux_test/qgxs_linux_phase1/scripts/linux/run_receiver.sh",
+    "source_sha256": "c8cae2fadff3f8f71e221174ca4e0141162636d04c7671433f8fc3660251f3b2",
+    "packaged_sha256": "c8cae2fadff3f8f71e221174ca4e0141162636d04c7671433f8fc3660251f3b2"
+  },
+  {
+    "file": "GXRStream/ubuntu/sender/webrtc_sender.py",
+    "source": "home/mininet-ovs/qgxs_linux_test/qgxs_linux_phase1/sender/webrtc_sender.py",
+    "source_sha256": "407813960e526318f6e760fd07a983347ba3d5f3140cee3c1a8d9782047137cf",
+    "packaged_sha256": "407813960e526318f6e760fd07a983347ba3d5f3140cee3c1a8d9782047137cf"
+  },
+  {
+    "file": "GXRStream/ubuntu/sender/webrtc_sender_backend/__init__.py",
+    "source": "home/mininet-ovs/qgxs_linux_test/qgxs_linux_phase1/sender/webrtc_sender_backend/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "packaged_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "GXRStream/ubuntu/sender/webrtc_sender_backend/cli.py",
+    "source": "home/mininet-ovs/qgxs_linux_test/qgxs_linux_phase1/sender/webrtc_sender_backend/cli.py",
+    "source_sha256": "04b1e9155646e1fe25a044855b10cff8b002e141471a59fdcfeda71e4e60ca2e",
+    "packaged_sha256": "04b1e9155646e1fe25a044855b10cff8b002e141471a59fdcfeda71e4e60ca2e"
+  },
+  {
+    "file": "GXRStream/ubuntu/sender/webrtc_sender_backend/config.py",
+    "source": "home/mininet-ovs/qgxs_linux_test/qgxs_linux_phase1/sender/webrtc_sender_backend/config.py",
+    "source_sha256": "d9d523b4c2829dbc5f51e6fdabd60bfee5519d117fa2fd91acf2aeedbc18f90e",
+    "packaged_sha256": "d9d523b4c2829dbc5f51e6fdabd60bfee5519d117fa2fd91acf2aeedbc18f90e"
+  },
+  {
+    "file": "GXRStream/ubuntu/sender/webrtc_sender_backend/env.py",
+    "source": "home/mininet-ovs/qgxs_linux_test/qgxs_linux_phase1/sender/webrtc_sender_backend/env.py",
+    "source_sha256": "a138728a3afa9b15afcbd7770b0ec3c647d75ad4ad36be7c2e4f72413b47659e",
+    "packaged_sha256": "a138728a3afa9b15afcbd7770b0ec3c647d75ad4ad36be7c2e4f72413b47659e"
+  },
+  {
+    "file": "GXRStream/ubuntu/sender/webrtc_sender_backend/gst_app.py",
+    "source": "home/mininet-ovs/qgxs_linux_test/qgxs_linux_phase1/sender/webrtc_sender_backend/gst_app.py",
+    "source_sha256": "0c7709574abab3b604a29c9805d32b3b9cbf575952abfbddd25f0da959b16dcc",
+    "packaged_sha256": "0c7709574abab3b604a29c9805d32b3b9cbf575952abfbddd25f0da959b16dcc"
+  },
+  {
+    "file": "GXRStream/ubuntu/sender/webrtc_sender_backend/main.py",
+    "source": "home/mininet-ovs/qgxs_linux_test/qgxs_linux_phase1/sender/webrtc_sender_backend/main.py",
+    "source_sha256": "f35a47b4c868b06309d2ad67bb2a0979783faef1a136b9de9439ae2956e2d7f7",
+    "packaged_sha256": "f35a47b4c868b06309d2ad67bb2a0979783faef1a136b9de9439ae2956e2d7f7"
+  },
+  {
+    "file": "GXRStream/ubuntu/sender/webrtc_sender_backend/pipeline_builder.py",
+    "source": "home/mininet-ovs/qgxs_linux_test/qgxs_linux_phase1/sender/webrtc_sender_backend/pipeline_builder.py",
+    "source_sha256": "145257495eac2e86ae532fa1f377437ef03db2b094a4090c4a2b300a1a722080",
+    "packaged_sha256": "145257495eac2e86ae532fa1f377437ef03db2b094a4090c4a2b300a1a722080"
+  },
+  {
+    "file": "GXRStream/ubuntu/sender/webrtc_sender_backend/signaling.py",
+    "source": "home/mininet-ovs/qgxs_linux_test/qgxs_linux_phase1/sender/webrtc_sender_backend/signaling.py",
+    "source_sha256": "faec0895fdbba86b683f78c459614504bd4a218f69a26c565d451c130c4f8fbb",
+    "packaged_sha256": "faec0895fdbba86b683f78c459614504bd4a218f69a26c565d451c130c4f8fbb"
+  },
+  {
+    "file": "experiments/helpers/SATC_Uncapped_P4_v1.py",
+    "source": "data/home-mininet-ovs/Downloads/files_to_upload/RUN_360SATC_ALL_EXPERIMENTS_v6.py#satc",
+    "source_sha256": "c1d85cf889f4353f2e2c5a143c4a0667ead11d11679003e27b490fb1ac740d54",
+    "note": "Original embedded helper extracted into a readable file; helper path constants use environment overrides.",
+    "packaged_sha256": "c1d85cf889f4353f2e2c5a143c4a0667ead11d11679003e27b490fb1ac740d54"
+  },
+  {
+    "file": "experiments/helpers/SATC_CBR_FullWorkload_P4_v1.py",
+    "source": "data/home-mininet-ovs/Downloads/files_to_upload/RUN_360SATC_ALL_EXPERIMENTS_v6.py#cbr",
+    "source_sha256": "95666791de8af2651ccf43816ec1e7ec8d08615551ae2be02bd56ce06e210fc2",
+    "note": "Original embedded helper extracted into a readable file; helper path constants use environment overrides.",
+    "packaged_sha256": "0b3cada79161cb086224e8625854c4bf44cd2de8450e24dd64a658063ec76f50"
+  },
+  {
+    "file": "experiments/helpers/RUN_CARUSO_BASELINES_ALL_IN_ONE_v3.py",
+    "source": "data/home-mininet-ovs/Downloads/files_to_upload/RUN_360SATC_ALL_EXPERIMENTS_v6.py#caruso",
+    "source_sha256": "1b538ee18e6ecb14c9509c41100cf2a32584ac041bc7fe5c3cc84abb80378fc7",
+    "note": "Original embedded helper extracted into a readable file; helper path constants use environment overrides.",
+    "packaged_sha256": "bb9a67a15bc9650d4bfde7b9ea63ba8dd01bf7b69a19b2cdb901877425a9c78e"
+  },
+  {
+    "file": "experiments/helpers/SATC_Integrated_Real5G_60FPS_v14.py",
+    "source": "data/home-mininet-ovs/Downloads/files_to_upload/RUN_360SATC_ALL_EXPERIMENTS_v6.py#v14",
+    "source_sha256": "7b21eb0288a43ebccb1ed612559c33aac71e67e1a908c7c53524821f255c1f7f",
+    "note": "Original embedded helper extracted into a readable file; helper path constants use environment overrides.",
+    "packaged_sha256": "a1a507385b705dad2289a11d441867b0b1d57a480ddf5f65e884768a97c761f5"
+  },
+  {
+    "file": "runtime/shared_input.h",
+    "source": "data/home-mininet-ovs/Downloads/SATC_FINAL_QUALITY_EXP09/satc_p7/code/shared_input.h",
+    "source_sha256": "b1ae2da895203d71bbb9307c79ce3faf67044f2d31e8158b41ee649878d7bcf6",
+    "packaged_sha256": "b1ae2da895203d71bbb9307c79ce3faf67044f2d31e8158b41ee649878d7bcf6"
+  },
+  {
+    "file": "runtime/core.py",
+    "source": "data/home-mininet-ovs/Downloads/SATC_FINAL_QUALITY_EXP09/satc_p7/code/core.py",
+    "source_sha256": "fab2e6a50dfdda38e4476c488d16861809a6564f36687c7b2478b7a8a880ef9b",
+    "packaged_sha256": "fab2e6a50dfdda38e4476c488d16861809a6564f36687c7b2478b7a8a880ef9b"
+  },
+  {
+    "file": "runtime/map_projection.py",
+    "source": "data/home-mininet-ovs/Downloads/SATC_FINAL_QUALITY_EXP09/satc_p7/code/map_projection.py",
+    "source_sha256": "e9505f34a4e4ba3de75f76ada4bded2e27d127345715e748736f101ff1d18bca",
+    "packaged_sha256": "e9505f34a4e4ba3de75f76ada4bded2e27d127345715e748736f101ff1d18bca"
+  },
+  {
+    "file": "runtime/audit_optimization.py",
+    "source": "data/home-mininet-ovs/Downloads/SATC_FINAL_QUALITY_EXP09/satc_p7/code/audit_optimization.py",
+    "source_sha256": "dafa0bc42ea5890d31f1eec1617b502c9fc0f8c03a25111abc8c6821fe8469b0",
+    "packaged_sha256": "dafa0bc42ea5890d31f1eec1617b502c9fc0f8c03a25111abc8c6821fe8469b0"
+  },
+  {
+    "file": "runtime/nvenc_uncapped.cpp",
+    "source": "data/home-mininet-ovs/Downloads/SATC_FINAL_QUALITY_EXP09/satc_p7/code/nvenc_uncapped.cpp",
+    "source_sha256": "fc97b266477463cb3a8a77bf6de0bac3e6ba3a75d0f7ac71826907f116f05df0",
+    "packaged_sha256": "fc97b266477463cb3a8a77bf6de0bac3e6ba3a75d0f7ac71826907f116f05df0"
+  },
+  {
+    "file": "runtime/CMakeLists.txt",
+    "source": "data/home-mininet-ovs/Downloads/SATC_FINAL_QUALITY_EXP09/satc_p7/code/CMakeLists.txt",
+    "source_sha256": "dd42973c7971fba336489011a8d14c921984a82753f745af210a699504b0145b",
+    "packaged_sha256": "dd42973c7971fba336489011a8d14c921984a82753f745af210a699504b0145b"
+  },
+  {
+    "file": "runtime/live_model.py",
+    "source": "data/home-mininet-ovs/Downloads/SATC_FINAL_QUALITY_EXP09/satc_p7/code/live_model.py",
+    "source_sha256": "495d89c1f04ecd4e50989d6bb2415adb4cacf9fd0c95a6dc4ff5652058078202",
+    "packaged_sha256": "495d89c1f04ecd4e50989d6bb2415adb4cacf9fd0c95a6dc4ff5652058078202"
+  },
+  {
+    "file": "runtime/shared_frame.py",
+    "source": "data/home-mininet-ovs/Downloads/SATC_FINAL_QUALITY_EXP09/satc_p7/code/shared_frame.py",
+    "source_sha256": "70982acb81546b684a417dba99972849e5fa82729c555a335f8f7f53073ba7da",
+    "packaged_sha256": "70982acb81546b684a417dba99972849e5fa82729c555a335f8f7f53073ba7da"
+  }
+]
