@@ -72,10 +72,14 @@ available in [the previous revision](https://github.com/publioelon/360-SATC/tree
 
 ## Validation and license
 
-Syntax, model checksum, policy, codec-map geometry, and retained integrity checks
-are validated without a GPU. CUDA/NVENC throughput, network measurements, and
-Quest playback must be validated on the target hardware; this update does not
-claim new experimental results.
+GXRStream was extensively tested on the author's Ubuntu RTX 4060 notebook.
+The [streaming guide](docs/streaming.md) links the existing release bundle with
+the Unity project, Ubuntu sender, and Quest 3 APK.
+
+This repository update passed hardware-independent syntax, model checksum,
+policy, codec-map geometry, and retained integrity checks. The newly added
+command wrappers and SATC replay integration were not rerun on GPU/Quest hardware
+here; this update does not claim new experimental results.
 
 360-SATC uses the [MIT license](LICENSE). Imported GXRStream/QGXS code retains
 its [Apache 2.0 license](GXRStream/LICENSE). See [source provenance](docs/source_manifest.json).

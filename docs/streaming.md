@@ -4,22 +4,65 @@ The paper calls the transport **GXRStream**. Its upstream repository is currentl
 named **QGXS**. The Ubuntu sender recovered from the uploaded notebook is included
 here. Unity and Quest receiver assets are pinned as `GXRStream/receiver-source`.
 
-## Receiver
+## Tested release: start here
+
+GXRStream was extensively tested on the author's Ubuntu RTX 4060 notebook.
+Download the existing [v0.1.0 release bundle from Google Drive](https://drive.google.com/file/d/1Jy8PrMn2373mifEb80dezbvN0fJgldyk/view?usp=sharing).
+The upstream release documentation lists:
+
+| File | Purpose |
+|---|---|
+| `QSXR-v0.1.0-Ubuntu-Sender-GUI.tar.gz` | Ubuntu sender GUI |
+| `QSXR-v0.1.0-Ubuntu-Unity-Receiver.zip` | Complete Ubuntu Unity receiver project |
+| `QSXR-v0.1.0-Quest3-Receiver.apk` | Installable Quest 3 receiver |
+| `SHA256SUMS.txt` | Download integrity checks |
+| `RELEASE_NOTES.md` | Release details |
+
+Extract the sender and Unity archives. Open the receiver with Unity 2022.3 LTS
+(the documented release uses 2022.3.45f1):
+
+```bash
+UNITY_EDITOR="$HOME/Unity/Hub/Editor/2022.3.45f1/Editor/Unity"
+PROJECT="/path/to/QSXR-v0.1.0-Ubuntu-Unity-Receiver"
+prime-run "$UNITY_EDITOR" -projectPath "$PROJECT" -force-glcore
+```
+
+Open `Assets/Scenes/Main.unity` and press Play. Start the sender:
+
+```bash
+cd /path/to/QSXR-v0.1.0-Ubuntu-Sender-GUI
+python3 launcher_gui_linux.py
+```
+
+For receiver and sender on the same notebook, use `127.0.0.1`, signaling port
+9001, and feedback port 9101. Receiver shortcuts: F8 for the HUD, F9 for logging,
+and F10 for a snapshot.
+
+For Quest 3, enable Developer Mode, connect the headset, and install the APK:
+
+```bash
+adb install -r QSXR-v0.1.0-Quest3-Receiver.apk
+```
+
+Open QGXS on the headset. Connect the sender and headset to the same network and
+set the sender's destination to the headset IP, signaling port 9001.
+Sender/receiver dimensions must match: 4096×2048 for the examples below.
+
+The [upstream release README](https://github.com/publioelon/QGXS---quest-gstreamer-xr-streaming-#readme)
+documents Ubuntu-to-Unity at 4096×2048/120 FPS and Ubuntu-to-Quest 3 at
+4096×2048/60 FPS with H.264, H.265, and AV1. These are the existing release's
+validation claims, not new measurements from this repository update.
+
+## Optional receiver source build
 
 ```bash
 git submodule update --init GXRStream/receiver-source
 ```
 
-Use the Quest setup and native build instructions in
-`GXRStream/receiver-source/receiver/quest3/README.md`. The complete Unity project
-is at `GXRStream/receiver-source/receiver/unity/QSXRReceiver`. Requirements include
-Unity 2022.3 LTS, Android ARM64 tooling, GStreamer Android libraries, and a Quest 3
-in Developer Mode. The upstream release link and source-build instructions remain
-in its README; this repository does not bundle a newly built APK.
-
-Connect the sender and headset to the same network. Start the receiver and use
-its IP address and signaling port (default 9001). Sender/receiver dimensions must
-match: 4096×2048 for the examples below.
+The complete source project is at
+`GXRStream/receiver-source/receiver/unity/QSXRReceiver`. For rebuilding the Quest
+receiver, follow `GXRStream/receiver-source/receiver/quest3/README.md`; it requires
+Unity 2022.3 LTS, Android ARM64 tooling, and GStreamer Android libraries.
 
 ## Ubuntu sender
 
@@ -61,3 +104,7 @@ only; the regular streaming path supports the other codecs separately.
 The original integrated network experiments are described in
 [reproduction.md](reproduction.md). Their receiver is an instrumented GStreamer
 client for transport measurements, distinct from Unity display performance.
+
+The new `satc.py` and `stream_encoded.py` wrappers passed source checks here,
+but have not been rerun on the notebook or headset. This does not change the
+validation status of the existing GXRStream release.

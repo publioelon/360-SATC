@@ -33,8 +33,10 @@ The final quality source and historical network/throughput source have different
 spatial policies. The documentation identifies each. No historical result table
 is republished as new measurements of the final policy.
 
-The Ubuntu sender and upstream Quest receiver are assembled from separate source
-snapshots. Their presence does not establish a newly tested integrated 4K60 run.
+GXRStream was extensively tested on the author's Ubuntu RTX 4060 notebook;
+the existing release is linked in [the streaming guide](streaming.md). The sender
+and receiver source snapshots retained here document that system. The new
+repository wrappers have not been rerun as an integrated hardware test.
 A completed H.264 encode can be replayed through the existing FIFO transport path;
 a live all-codec final-policy encoder/controller/Quest launcher remains a separate
 integration step.
