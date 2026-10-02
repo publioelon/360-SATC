@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+saliency/models/*.onnx
+outputs/
+data/
+configs/experiments.local.json
+trt_cache/
+GXRStream/ubuntu/logs/
+GXRStream/ubuntu/metrics/

@@ -1,0 +1,16 @@
+lpips==0.1.4
+matplotlib==3.10.7
+numpy==2.2.6
+nvidia-cudnn-cu12==9.10.2.21
+onnx==1.19.1
+onnxruntime-gpu==1.23.2
+opencv-python==4.12.0.88
+opencv-python-headless==4.12.0.88
+pillow==11.0.0
+scipy==1.16.2
+tensorrt==10.13.3.9
+tensorrt_cu13==10.13.3.9
+tensorrt_cu13_bindings==10.13.3.9
+tensorrt_cu13_libs==10.13.3.9
+torch==2.8.0+cu126
+tqdm==4.67.1

@@ -1,0 +1,8 @@
+{
+  "prepared_dir": "/absolute/path/to/prepared_inputs",
+  "london_video": "/absolute/path/to/360_london_tower_60fps_120s.mp4",
+  "sdk": "/absolute/path/to/Video_Codec_SDK_13.0.19",
+  "python": "/absolute/path/to/venvs/satc/bin/python",
+  "metrics_python": "/absolute/path/to/venvs/video-metrics/bin/python",
+  "shared_mat": "/absolute/path/to/the/original/trace_and_viewport_metadata.mat"
+}
