@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "record_status": "template",
+  "run_id": null,
+  "recorded_at_utc": null,
+  "original_run_at_utc": null,
+  "experiment": {
+    "figure_or_table": null,
+    "entry_point": null,
+    "arguments": [],
+    "configuration_sha256": null,
+    "input_manifest": null,
+    "result_files": []
+  },
+  "source": {
+    "repository_commit": null,
+    "working_tree_dirty": null,
+    "source_patch_sha256": null,
+    "receiver_submodule_commit": null,
+    "model_sha256": null
+  },
+  "software": {
+    "python": null,
+    "python_packages_file": null,
+    "nvidia_driver": null,
+    "cuda_toolkit": null,
+    "video_codec_sdk": null,
+    "gstreamer_core": null,
+    "gstreamer_plugin_records": [],
+    "unity": null,
+    "receiver_build_id": null
+  },
+  "settings": {
+    "codec": null,
+    "codec_profile": null,
+    "codec_level": null,
+    "width": null,
+    "height": null,
+    "fps": null,
+    "target_bitrate_mbit_s": null,
+    "preset": null,
+    "saliency_policy": null,
+    "history_stride": null,
+    "inference_provider": null,
+    "warmup_frames": null,
+    "measured_frames": null,
+    "measurement_boundary": null
+  },
+  "evidence_files": [],
+  "unresolved_fields": []
+}

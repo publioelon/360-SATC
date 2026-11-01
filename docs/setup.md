@@ -52,6 +52,14 @@ The uploaded notebook environment is recorded in
 10.13.3.9, ONNX Runtime GPU 1.23.2, and PyTorch 2.8.0+cu126; this is a source
 snapshot, not a guarantee that every version combination is portable.
 
+## Record software and plugin versions
+
+The Python dependency snapshot and SDK instructions identify part of the
+environment. GStreamer plugin builds and receiver binaries also affect the
+streaming path. [Source versions and experiment records](provenance.md) lists
+what is recorded and gives Ubuntu commands to inspect the current installation
+without running an encoding or streaming experiment.
+
 ## If a check fails
 
 | Symptom | Action |
