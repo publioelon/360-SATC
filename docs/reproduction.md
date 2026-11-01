@@ -50,6 +50,71 @@ and elevated privileges for network namespace construction. The script requests
 `sudo` for that stage. Run on an isolated experiment machine. Encoder processing
 FPS, received media FPS, and HMD refresh rate have different measurement boundaries.
 
+## Uniform CBR throughput rerun for Figure 4
+
+`experiments/benchmark_cbr.py` measures uniform CBR without MoST-Sal inference,
+model preprocessing, saliency smoothing, tile ranking, or spatial QP allocation.
+It uses Python's standard library and the existing FFmpeg/CUDA/NVENC installation;
+it requires no model, Python GPU packages, transport setup, or administrator access.
+
+Use the same prepared Basketball, Rollercoaster, Ballet, and London Tower videos
+and the same notebook used for the original throughput measurements:
+
+```bash
+# List candidate files if the existing paths are unknown.
+python3 experiments/benchmark_cbr.py --discover
+
+# The existing local configuration supplies prepared_dir, london_video, and sdk.
+python3 experiments/benchmark_cbr.py --config configs/experiments.local.json --plan
+python3 experiments/benchmark_cbr.py --config configs/experiments.local.json
+```
+
+Alternatively, supply `--prepared-dir /path/to/prepared_inputs`,
+`--london-video /path/to/the/prepared/london.mp4`, and
+`--sdk /path/to/Video_Codec_SDK_13.0.19`. Repeated `--video LABEL=/exact/path.mp4`
+arguments select explicit inputs, where LABEL is basketball, rollercoaster, ballet,
+or london. When no input paths are given, discovery requires exactly one candidate
+per video; ambiguous files must be selected explicitly. Inputs must be 4096×2048,
+60 FPS, 8 bit BT.709 limited range YUV420, with at least 1,504 frames. The runner
+does not prepare or substitute videos. `--plan` validates metadata without running
+CUDA or NVENC. Close other GPU workloads before the measurements.
+
+Four videos × three codecs × two rates give **24 runs** per repetition. The
+defaults are one repetition, 240 warmup frames, and 1,200 measured frames per run;
+`--repeats N` repeats the entire matrix in the recorded order. The native P4
+bridge and raw-frame Source are extracted unchanged from the retained
+`SATC_CBR_FullWorkload_P4_v1.py` after checking its SHA256. If the script is run
+outside the repository, it downloads that source from the pinned commit, checks
+the same hash, and records the source with the results. The historical runner is
+preserved for provenance; it remains a different workload and should not be used
+as the corrected uniform CBR throughput baseline.
+
+P4, low latency, CBR, GOP 240, no B frames, no lookahead or AQ, single pass, and
+the 0.25 second VBV setting are retained. A constant zero delta buffer preserves
+the NVENC interface; no saliency map or spatial allocation is calculated. Necessary
+CUDA source decoding, NV12 preparation, copies, NVENC encoding, completed access
+unit receipt, and event logging remain within the processing workload. The timer
+starts after the last warmup output and its event row, before the measured source
+gate opens, and stops after the final measured output and its event row. This
+includes pipeline fill and drain. Encoded payloads are consumed, as in the retained
+CBR runner, rather than saved as video files. Network and display are excluded.
+
+Each run records completed frame IDs, timings, encoded byte counts, target and
+applied bitrates, and a checksum of the constant QP buffer. Invalid runs remain
+in `SUMMARY.csv`. Low FPS does not cause a retry or invalidate a completed run.
+`one_second_throughput.csv` records nonoverlapping wall-clock windows starting
+at the measurement gate; use rows with `full_second=True` for Figure 4 and retain
+the marked final partial interval. Whole-batch FPS is reported separately.
+
+Results go into a new `SATC_CBR_ENCODER_ONLY_P4_...` directory under Downloads,
+or the new directory selected by `--output`. Existing results are never replaced.
+The final printed `_UPLOAD.zip` contains the run order, summary, frame logs,
+integrity audits, software/GPU information, input hashes, and source snapshots.
+The checks and runner do not supply measured GPU results. Keep MoST-Sal enabled
+for 360-SATC, and compare results only when its inputs, P4 settings, hardware,
+and timing boundary match. Update Figure 4 and the manuscript after reviewing
+the actual rerun output.
+
 ## Saliency and viewport evaluation
 
 The original saliency scripts are in `saliency/research/`; FlowSal is the working
