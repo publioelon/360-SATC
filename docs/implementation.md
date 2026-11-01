@@ -41,6 +41,13 @@ A completed H.264 encode can be replayed through the existing FIFO transport pat
 a live all-codec final-policy encoder/controller/Quest launcher remains a separate
 integration step.
 
+## Coding and receiver interfaces
+
+[The specification map](standards.md) explains how QP allocation uses existing
+codec syntax. [The interface reference](interfaces.md) records the portable
+encoder settings, stream formats, application signaling, and receiver diagnostics.
+Model tensor dimensions use height by width; video dimensions use width by height.
+
 ## Provenance and validation
 
 The source manifest records selected original file paths and hashes. Path and

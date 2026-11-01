@@ -64,6 +64,14 @@ these recipes are not a new one-command training release.
 require the original VR-EyeTracking videos and head trajectories and retain
 notebook paths. These trajectories are evaluation inputs, never SATC runtime inputs.
 
+## Record the implementation used for each result
+
+Keep the command, configuration, source and model hashes, software versions,
+and result files together. [Provenance documentation](provenance.md) separates
+the recovered source snapshot from evidence for an individual experimental run
+and provides a record template. Missing historical values must be recovered
+from original logs rather than filled with the current notebook's versions.
+
 ## Local checks
 
 ```bash

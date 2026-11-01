@@ -4,7 +4,7 @@
 
 ### Saliency-Aware Tile Compression for Real-Time 360° Video Streaming at the Edge
 
-[Quick start](#quick-start) · [Streaming guide](docs/streaming.md) · [Reproduce experiments](docs/reproduction.md) · [Download GXRStream](https://drive.google.com/file/d/1Jy8PrMn2373mifEb80dezbvN0fJgldyk/view?usp=sharing) · [Citation](#citation)
+[Quick start](#quick-start) · [Streaming guide](docs/streaming.md) · [Reproduce experiments](docs/reproduction.md) · [Standards](docs/standards.md) · [Interfaces](docs/interfaces.md) · [Download GXRStream](https://drive.google.com/file/d/1Jy8PrMn2373mifEb80dezbvN0fJgldyk/view?usp=sharing) · [Citation](#citation)
 
 </div>
 
@@ -81,6 +81,17 @@ The retained runtime uses **BGR/255 inputs and temporal stride 8**. The manuscri
 uses RGB terminology and describes consecutive frames. See
 [implementation notes](docs/implementation.md) before interpreting a run as an
 exact reproduction. `--history-stride 1` explicitly selects consecutive frames.
+
+## Coding and transport
+
+MoST-Sal weights, saliency maps, and QP maps remain at the encoder. NVENC
+produces a single panoramic video stream; the receiver decodes the selected
+codec and uses its configured panoramic display.
+
+See the [coding and transport specifications](docs/standards.md),
+[encoder and streaming interfaces](docs/interfaces.md), and
+[source versions and experiment records](docs/provenance.md) for the specification
+mapping, application messages, and recorded environment information.
 
 ## Included components
 

@@ -4,6 +4,14 @@ The paper calls the transport **GXRStream**. Its upstream repository is currentl
 named **QGXS**. The Ubuntu sender recovered from the uploaded notebook is included
 here. Unity and Quest receiver assets are pinned as `GXRStream/receiver-source`.
 
+## Coding, signaling, and configuration
+
+The [specification map](standards.md) identifies the codec and transport
+specifications. [Interface documentation](interfaces.md) records RTP codec
+mappings, TCP signaling, optional receiver diagnostics, and the configuration
+differences between SATC encoding and regular GXRStream streaming.
+See [provenance records](provenance.md) for source snapshots and version capture.
+
 ## Tested release: start here
 
 GXRStream was extensively tested on the author's Ubuntu RTX 4060 notebook.
